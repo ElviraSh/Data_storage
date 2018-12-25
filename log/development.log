@@ -1,0 +1,486 @@
+Started GET "/national_news" for 127.0.0.1 at 2018-12-25 00:27:46 +0300
+Processing by V1::NationalController#index as HTML
+  [1m[36mNationalNewsItem Load (1.2ms)[0m  [1m[34mSELECT "national_news_items".* FROM "national_news_items" WHERE ((title) ILIKE '%%')[0m
+  ↳ app/controllers/v1/national_controller.rb:4
+No serializer found for resource: #<NationalNewsItem id: 1, title: "Afghan government compound attack kills 28", content: nil, url: "https://www.bbc.co.uk/news/world-asia-46674427", description: "More than 350 employees had to be freed after a gu...", url_to_image: "https://ichef.bbci.co.uk/news/1024/branded_news/2E...", author: "https://www.facebook.com/bbcnews", created_at: "2018-12-24 20:35:41", updated_at: "2018-12-24 21:01:34">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with NationalNewsItem::ActiveRecord_Relation (4.22ms)
+Completed 200 OK in 131ms (Views: 37.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/national_news" for 127.0.0.1 at 2018-12-25 00:30:42 +0300
+Processing by V1::NationalController#index as HTML
+  [1m[36mNationalNewsItem Load (0.9ms)[0m  [1m[34mSELECT "national_news_items".* FROM "national_news_items" WHERE ((title) ILIKE '%%')[0m
+  ↳ app/controllers/v1/national_controller.rb:4
+No serializer found for resource: #<NationalNewsItem id: 1, title: "Afghan government compound attack kills 28", content: nil, url: "https://www.bbc.co.uk/news/world-asia-46674427", description: "More than 350 employees had to be freed after a gu...", url_to_image: "https://ichef.bbci.co.uk/news/1024/branded_news/2E...", author: "https://www.facebook.com/bbcnews", created_at: "2018-12-24 20:35:41", updated_at: "2018-12-24 21:01:34">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with NationalNewsItem::ActiveRecord_Relation (6.4ms)
+Completed 200 OK in 81ms (Views: 25.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/national_news" for 127.0.0.1 at 2018-12-25 00:30:58 +0300
+Processing by V1::NationalController#index as HTML
+  [1m[36mNationalNewsItem Load (0.8ms)[0m  [1m[34mSELECT "national_news_items".* FROM "national_news_items" WHERE ((title) ILIKE '%%')[0m
+  ↳ app/controllers/v1/national_controller.rb:4
+No serializer found for resource: #<NationalNewsItem id: 1, title: "Afghan government compound attack kills 28", content: nil, url: "https://www.bbc.co.uk/news/world-asia-46674427", description: "More than 350 employees had to be freed after a gu...", url_to_image: "https://ichef.bbci.co.uk/news/1024/branded_news/2E...", author: "https://www.facebook.com/bbcnews", created_at: "2018-12-24 20:35:41", updated_at: "2018-12-24 21:01:34">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with NationalNewsItem::ActiveRecord_Relation (3.04ms)
+Completed 200 OK in 39ms (Views: 18.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/national_news" for 127.0.0.1 at 2018-12-25 01:30:25 +0300
+Processing by V1::NationalController#index as HTML
+  [1m[36mNationalNewsItem Load (1.0ms)[0m  [1m[34mSELECT "national_news_items".* FROM "national_news_items" WHERE ((title) ILIKE '%%')[0m
+  ↳ app/controllers/v1/national_controller.rb:4
+No serializer found for resource: #<NationalNewsItem id: 1, title: "Afghan government compound attack kills 28", content: nil, url: "https://www.bbc.co.uk/news/world-asia-46674427", description: "More than 350 employees had to be freed after a gu...", url_to_image: "https://ichef.bbci.co.uk/news/1024/branded_news/2E...", author: "https://www.facebook.com/bbcnews", created_at: "2018-12-24 20:35:41", updated_at: "2018-12-24 21:01:34">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with NationalNewsItem::ActiveRecord_Relation (3.07ms)
+Completed 200 OK in 62ms (Views: 20.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/national_news?query=Ab" for 127.0.0.1 at 2018-12-25 01:30:28 +0300
+Processing by V1::NationalController#index as */*
+  Parameters: {"query"=>"Ab"}
+  [1m[36mNationalNewsItem Load (0.7ms)[0m  [1m[34mSELECT "national_news_items".* FROM "national_news_items" WHERE ((title) ILIKE '%Ab%')[0m
+  ↳ app/controllers/v1/national_controller.rb:4
+No serializer found for resource: #<NationalNewsItem id: 9, title: "Baby named after officers who took woman to hospit...", content: nil, url: "https://www.bbc.co.uk/news/uk-england-essex-466753...", description: "PCs James Ireland and Dan Bellingham took the moth...", url_to_image: "https://ichef.bbci.co.uk/news/1024/branded_news/11...", author: "https://www.facebook.com/bbcnews", created_at: "2018-12-24 18:46:28", updated_at: "2018-12-24 21:01:34">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with NationalNewsItem::ActiveRecord_Relation (0.44ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35mSQL (2.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mtv_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE "mtv_items" ("id" bigserial primary key, "title" character varying, "content" text, "url" character varying, "description" text, "url_to_image" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181203134367)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-24 22:38:53.683154"], ["updated_at", "2018-12-24 22:38:53.683154"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "mtv_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "mtv_items" ("id" bigserial primary key, "title" character varying, "content" text, "url" character varying, "description" text, "url_to_image" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-24 22:38:53.716637"], ["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "mtv_items" WHERE "mtv_items"."url" = $1 LIMIT $2[0m  [["url", "http://www.mtv.com/news/3107736/lachlan-watson-non-binary-journey/"], ["LIMIT", 1]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Create (0.5ms)[0m  [1m[32mINSERT INTO "mtv_items" ("title", "url", "description", "url_to_image", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Chilling Adventures Of Sabrina‘s Lachlan Watson Talks Life Inside ‘The Gender Void’"], ["url", "http://www.mtv.com/news/3107736/lachlan-watson-non-binary-journey/"], ["description", "\"Chilling Adventures of Sabrina\" star Lachlan Watson details his path to coming out as non-binary."], ["url_to_image", "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:665323?quality=0.8&format=jpg&width=1440&height=810&.jpg"], ["author", "Alissa Schulman"], ["created_at", "2018-12-24 15:00:45"], ["updated_at", "2018-12-24 22:39:15.537292"]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "mtv_items" WHERE "mtv_items"."url" = $1 LIMIT $2[0m  [["url", "http://www.mtv.com/news/3107688/young-thug-as-paintings-instagram-account/"], ["LIMIT", 1]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Create (0.3ms)[0m  [1m[32mINSERT INTO "mtv_items" ("title", "url", "description", "url_to_image", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "How One Artist Turned a Highbrow Meme Account Into a Collaboration With Young Thug"], ["url", "http://www.mtv.com/news/3107688/young-thug-as-paintings-instagram-account/"], ["description", "Inspired by Young Thug, art student Hajar Benjida grew her @YoungThugAsPaintings meme account into a SCOPE Art Show exhibition that caught the attention of many."], ["url_to_image", "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:665344?quality=0.8&format=jpg&width=1440&height=810&.jpg"], ["author", "MTV News Staff"], ["created_at", "2018-12-24 14:00:53"], ["updated_at", "2018-12-24 22:39:15.540902"]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/news_items.rake:18
+Started GET "/mtv_news" for 127.0.0.1 at 2018-12-25 01:40:35 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mtv_news" for 127.0.0.1 at 2018-12-25 01:41:03 +0300
+  
+LoadError (Unable to autoload constant V1::MtvController, expected /Users/rager.tf/RubymineProjects/Новая папка/Data_storage/app/controllers/v1/mtv_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35mSQL (1.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mtv_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE "mtv_items" ("id" bigserial primary key, "title" character varying, "content" text, "url" character varying, "description" text, "url_to_image" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181203134367)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-24 22:43:08.763104"], ["updated_at", "2018-12-24 22:43:08.763104"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (7.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "mtv_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "mtv_items" ("id" bigserial primary key, "title" character varying, "content" text, "url" character varying, "description" text, "url_to_image" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-24 22:43:08.819580"], ["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/Cellar/ruby/2.5.3_1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "mtv_items" WHERE "mtv_items"."url" = $1 LIMIT $2[0m  [["url", "http://www.mtv.com/news/3107736/lachlan-watson-non-binary-journey/"], ["LIMIT", 1]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Create (0.7ms)[0m  [1m[32mINSERT INTO "mtv_items" ("title", "url", "description", "url_to_image", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Chilling Adventures Of Sabrina‘s Lachlan Watson Talks Life Inside ‘The Gender Void’"], ["url", "http://www.mtv.com/news/3107736/lachlan-watson-non-binary-journey/"], ["description", "\"Chilling Adventures of Sabrina\" star Lachlan Watson details his path to coming out as non-binary."], ["url_to_image", "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:665323?quality=0.8&format=jpg&width=1440&height=810&.jpg"], ["author", "Alissa Schulman"], ["created_at", "2018-12-24 15:00:45"], ["updated_at", "2018-12-24 22:43:13.733135"]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "mtv_items" WHERE "mtv_items"."url" = $1 LIMIT $2[0m  [["url", "http://www.mtv.com/news/3107688/young-thug-as-paintings-instagram-account/"], ["LIMIT", 1]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[36mMtvItem Create (0.2ms)[0m  [1m[32mINSERT INTO "mtv_items" ("title", "url", "description", "url_to_image", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "How One Artist Turned a Highbrow Meme Account Into a Collaboration With Young Thug"], ["url", "http://www.mtv.com/news/3107688/young-thug-as-paintings-instagram-account/"], ["description", "Inspired by Young Thug, art student Hajar Benjida grew her @YoungThugAsPaintings meme account into a SCOPE Art Show exhibition that caught the attention of many."], ["url_to_image", "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:665344?quality=0.8&format=jpg&width=1440&height=810&.jpg"], ["author", "MTV News Staff"], ["created_at", "2018-12-24 14:00:53"], ["updated_at", "2018-12-24 22:43:13.736540"]]
+  ↳ lib/tasks/news_items.rake:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/news_items.rake:18
+Started GET "/mtv_news" for 127.0.0.1 at 2018-12-25 01:43:27 +0300
+  
+LoadError (Unable to autoload constant V1::MtvController, expected /Users/rager.tf/RubymineProjects/Новая папка/Data_storage/app/controllers/v1/mtv_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mtv_news" for 127.0.0.1 at 2018-12-25 01:43:30 +0300
+  
+LoadError (Unable to autoload constant V1::MtvController, expected /Users/rager.tf/RubymineProjects/Новая папка/Data_storage/app/controllers/v1/mtv_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mtv_news?query=ab" for 127.0.0.1 at 2018-12-25 01:44:20 +0300
+  
+LoadError (Unable to autoload constant V1::MtvController, expected /Users/rager.tf/RubymineProjects/Новая папка/Data_storage/app/controllers/v1/mtv_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mtv_news?query=ab" for 127.0.0.1 at 2018-12-25 01:45:08 +0300
+Processing by V1::MtvController#index as HTML
+  Parameters: {"query"=>"ab"}
+  [1m[36mMtvItem Load (4.1ms)[0m  [1m[34mSELECT "mtv_items".* FROM "mtv_items" WHERE ((title) ILIKE '%ab%')[0m
+  ↳ app/controllers/v1/mtv_controller.rb:4
+No serializer found for resource: #<MtvItem id: 1, title: "Chilling Adventures Of Sabrina‘s Lachlan Watson Ta...", content: nil, url: "http://www.mtv.com/news/3107736/lachlan-watson-non...", description: "\"Chilling Adventures of Sabrina\" star Lachlan Wats...", url_to_image: "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.c...", author: "Alissa Schulman", created_at: "2018-12-24 15:00:45", updated_at: "2018-12-24 22:43:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with MtvItem::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 67ms (Views: 20.3ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/mtv_news" for 127.0.0.1 at 2018-12-25 01:45:12 +0300
+Processing by V1::MtvController#index as HTML
+  [1m[36mMtvItem Load (1.3ms)[0m  [1m[34mSELECT "mtv_items".* FROM "mtv_items" WHERE ((title) ILIKE '%%')[0m
+  ↳ app/controllers/v1/mtv_controller.rb:4
+No serializer found for resource: #<MtvItem id: 1, title: "Chilling Adventures Of Sabrina‘s Lachlan Watson Ta...", content: nil, url: "http://www.mtv.com/news/3107736/lachlan-watson-non...", description: "\"Chilling Adventures of Sabrina\" star Lachlan Wats...", url_to_image: "https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.c...", author: "Alissa Schulman", created_at: "2018-12-24 15:00:45", updated_at: "2018-12-24 22:43:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with MtvItem::ActiveRecord_Relation (0.44ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.3ms)
+
+
