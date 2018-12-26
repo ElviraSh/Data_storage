@@ -3,7 +3,7 @@ require "news-api"
 namespace :news_items do
   desc "Fetch mtv news items"
   task fetch: :environment do
-    newsapi = News.new("f77fe59ee7d74c5c81720742b6d489c9")
+    newsapi = News.new("251255beb8744b148197bf71cc27ffbc")
 
     tomorrow = (Date.today - 1.day).strftime("%Y-%m-%d")
     today = Date.today.strftime("%Y-%m-%d")
